@@ -51,8 +51,8 @@ Once the image has finished building, the command *s2i usage spring-boot* will p
 #### Testing the builder image
 The builder image can be tested using the following commands:
 ```
-docker build -t spring-boot-candidate .
-IMAGE_NAME=spring-boot-candidate test/run
+docker build -t spring-boot-s2i-candidate .
+IMAGE_NAME=spring-boot-s2i-candidate test/run
 ```
 The builder image can also be tested by using the *make test* command since a *Makefile* is included.
 
