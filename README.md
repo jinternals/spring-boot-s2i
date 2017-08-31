@@ -42,7 +42,7 @@ Make sure that all of the scripts are executable by running *chmod +x s2i/bin/**
 #### Create the builder image
 The following command will create a builder image named spring-boot based on the Dockerfile that was created previously.
 ```
-docker build -t spring-boot .
+docker build -t spring-boot-s2i .
 ```
 The builder image can also be created by using the *make* command since a *Makefile* is included.
 

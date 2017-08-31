@@ -1,4 +1,4 @@
-package com.websystique.springboot.controller;
+package com.jinternals.springboot.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -9,8 +9,8 @@ public class HelloController {
 
 	@RequestMapping("/")
 	String home(ModelMap modal) {
-		modal.addAttribute("title", "Dear Learner");
-		modal.addAttribute("message", "Welcome to SpringBoot");
+		modal.addAttribute("title", "Spring boot s2i test");
+		modal.addAttribute("message", "you seems rocking");
 		return "hello";
 	}
 }

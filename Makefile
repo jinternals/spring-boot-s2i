@@ -1,5 +1,5 @@
 
-IMAGE_NAME = spring-boot
+IMAGE_NAME = spring-boot-s2i
 
 .PHONY: build
 build:
