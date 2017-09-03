@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ImageStream
+metadata:
+  name: 'spring-boot-s2i'
+  annotations:
+    openshift.io/display-name: 'Spring Boot Builder'
+spec:
+  tags:
+    - name: 'latest'
+      annotations:
+        openshift.io/display-name: 'Spring Boot Builder'
+        description: 'Build and spring boot applications on CentOS 7. For more information about using this builder image,
+        including OpenShift considerations, see https://github.com/jinternals/spring-boot-s2i/blob/master/README.md.'
+        iconClass: 'icon-spring'
+        sampleRepo: 'https://github.com/jinternals/spring-boot-s2i-demo.git'
+        tags: 'builder,java,spring-boot'
+        supports: 'java'
+        version: 'latest'
+      from:
+        kind: DockerImage
+        name: 'jinternals01/spring-boot-s2i:latest'

@@ -7,5 +7,4 @@
 #	https://github.com/openshift/source-to-image/blob/master/docs/builder_image.md
 #
 
-APP_TARGET=${APP_TARGET:-target}
-java $JAVA_OPTS -jar `find $APP_TARGET -name *.jar`
+java $JAVA_OPTS -jar  *.jar

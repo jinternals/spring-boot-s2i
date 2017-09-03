@@ -15,15 +15,27 @@ fi
 # Restore artifacts from the previous build (if they exist).
 #
 
-HOME=/opt/app-root/src
-
 if [ "$(ls /tmp/artifacts/ 2>/dev/null)" ]; then
   echo "---> Restoring build artifacts..."
   mv /tmp/artifacts/. ./
 fi
 
 echo "---> Installing application source..."
-cp -Rf /tmp/src/. ./
+cp -Rf /tmp/src/. ./src
 
-echo "---> Building application from source..."
-mvn clean install
+echo "---> Building spring boot application from source..."
+
+echo "---> MVN_ARGS = '$MVN_ARGS'"
+
+cd ./src
+
+if [ -f "mvnw" ]; then
+  ./mvnw clean install $MVN_ARGS
+else
+  mvn clean install $MVN_ARGS
+fi
+
+cp -Rf ./target/*.jar ../
+
+echo "---> Removing source code..."
+rm -r ./src
