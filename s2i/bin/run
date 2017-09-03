@@ -8,5 +8,4 @@
 #
 
 APP_TARGET=${APP_TARGET:-target}
-APP_NAME=${APP_NAME:- `find $APP_TARGET -name *.jar`}
-java $JAVA_OPTS -jar $APP_NAME
+java $JAVA_OPTS -jar `find $APP_TARGET -name *.jar`
