@@ -18,4 +18,4 @@ spec:
         version: 'latest'
       from:
         kind: DockerImage
-        name: 'jinternals01/spring-boot-s2i:latest'
+        name: 'jinternals/spring-boot-s2i:latest'
